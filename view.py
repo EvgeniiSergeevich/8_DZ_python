@@ -11,6 +11,9 @@ def input_mode():
 def new_people():
     return input('Введите id, Имя Фамилию, телефон, должность и почту через запятую: ')
 
+def add_ready(people):
+    print(f'Сотрудник {people} успешно добавлен!')
+
 def find_people():
     return input('Введите данные для поиска сотрудника: ')
 

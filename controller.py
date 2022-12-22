@@ -9,7 +9,9 @@ def run():
         if num == '1':
             view.print_base(model.read_file())
         elif num == '2':
-            model.add_people(view.new_people())
+            people = view.new_people()
+            model.add_people(people)
+            view.add_ready(people)
         elif num == '3':
             people = view.find_people()
             result = model.find_people(people)
