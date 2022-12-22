@@ -18,7 +18,9 @@ def run():
             view.print_find(people, result)
         elif num == '4':
             id = view.input_id()
+            view.print_find(id, model.find_people(id))
             new_data = view.input_data()
-            model.edit_people(id, new_data)
+            l = model.edit_people(id, new_data)
+            view.change()
         else:
             b = False

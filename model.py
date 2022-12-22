@@ -35,10 +35,6 @@ def remove_people(data):                        # Можно удалять по
         
         print(new_base)
         write_file(new_base)
-   
-
-# remove_people('3')
-
 
 
 def find_people(data):                                          # Поиск сотрудника
@@ -54,8 +50,6 @@ def find_people(data):                                          # Поиск с�
     return matches
             
 
-# print(find_people('2'))
-
 def edit_people(id, new_data):              # Редактирует данные по id
     base = read_file()
     tmp = find_people(id)
@@ -63,30 +57,25 @@ def edit_people(id, new_data):              # Редактирует данны�
         l = []
         if tmp == base[i]:
             l = base[i].split(';')
+            try:
+                new_data = int(new_data)
+            except:
+                new_data
             if type(new_data) == int:
                 l[2] = new_data
-                # print('1 if ', l)
                 base[i] = ';'.join(map(str, l))
                 break
             elif "@" in new_data:
                 l[4] = new_data
-                print('2 if ', l)
                 base[i] = ';'.join(map(str, l))
                 break
             elif len(new_data.split()) == 2 and new_data.istitle():
                 l[1] = new_data
-                # print('3 if ', l)
                 base[i] = ';'.join(map(str, l))
                 break
             else:
                 l[4] = new_data
-                # print('4 if ', l)
                 base[i] = ';'.join(map(str, l))
                 break
     new_base = [i.split(';') for i in base]
     write_file(new_base)
-
-
-
-
-# edit_people(1, 'asfasf@asd.com')
