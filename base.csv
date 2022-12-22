@@ -1,5 +1,5 @@
-id;Имя Фамилия;Номер телефона;Должность;e-mail
-1;Иван Иванов;123456;Директор;ivan@gmail.com
-2;Николай Петров;321654;Заместитель директора;nikolay@gmail.com
-3;Василий Долгорукий;546879;Секретарь;vasiliy@gmail.com
-4;Алексей Сидоров;741369;Рабочий;aleksey@gmail.com
+id;Name LastName;Phone Number;Position;e-mail
+1;Ivan Ivanov;123456;Director;ivan@gmail.com
+2;Nikolay Petrov;321654;Deputy director;nikolay@gmail.com
+3;Vasiliy Dolgorukiy;546879;Secretary;vasiliy@gmail.com
+4;Aleksey Sidorov;741369;Electrician;aleksey@gmail.com
