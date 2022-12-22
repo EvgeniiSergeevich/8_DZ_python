@@ -4,7 +4,7 @@ import csv
 def add_people(data):                                 # Добавление нового пользователя(работника)
     with codecs.open('base.csv', 'a', 'utf_8') as f:
         writer = csv.writer(f,delimiter=';')
-        writer.writerows([data.split()])
+        writer.writerows([data.split(',')])
 
 def read_file():                                        # Метод для чтения в список
     with codecs.open('base.csv', 'r', 'utf_8') as f:
@@ -41,7 +41,7 @@ def remove_people(data):                        # Можно удалять по
 
 
 
-def find_people(data):
+def find_people(data):                                          # Поиск сотрудника
     data = str(data)
     base = read_file()
     matches = [match for match in base if data in match]
@@ -49,6 +49,8 @@ def find_people(data):
         for i in range(len(matches)):
             if matches[i][0] == data:
                 matches = matches[i]
+    else:
+        matches = f'По запросу {data} ничего не найдено'
     return matches
             
 
